@@ -92,18 +92,22 @@ html{
 }
 .ecologia .eco{
     color: #00ff88;
-    
+    margin-top: 25px;
     font-size: 35px;
 }
 .bloquinhos{
-    display: flex;
-	justify-content: center;
-	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: stretch;
+	grid-gap: 20px;
+	padding: 30px 20px;
 }
 .bloquinhos .bloquinhosMateria{
     position: relative;
     font-size: 13px;
+	margin-bottom: 25px;
 }
+
 .bloquinhos .bloquinhosMateria h2{
     font-weight: normal;
 }
@@ -123,4 +127,12 @@ html{
 	position: absolute;
 	transform: translate(15px, 15px);
 	z-index: -1;
+}
+
+
+@media (max-width: 900px) {
+
+.bloquinhos{
+	grid-template-columns: repeat(1, 1fr);
+}
 }
