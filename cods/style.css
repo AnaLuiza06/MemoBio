@@ -34,7 +34,7 @@ header img {
 
 header > div {
   display: flex;
-  gap: 40px;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -97,7 +97,6 @@ main > section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid yellow;
   color: #fff;
 }
 
@@ -114,16 +113,22 @@ main > section {
   flex-direction: column;
 }
 
-#inicio .text h3 {
-  margin-top: 10px;
+#inicio .text h1 {
+  margin-top: 5px;
   margin-bottom: 30px;
+  font-size: 3em;
 }
 
 #inicio .text div {
   display: flex;
   justify-content: center;
 }
-
+#inicio .text h2{
+  color: #00ff88;
+}
+.text button{
+  width: 150px;
+}
 .container {
   /*min-height: 50vh;*/
   /* overflow-x: hidden; */
@@ -169,9 +174,13 @@ main > section {
 
 #principaisAssuntos {
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   color: #fff;
-  border: solid 2px red;
+}
+#principaisAssuntos .titulos{
+  color: #00ff88;
+  display: flex;
+  justify-content: center;
 }
 
 #principaisAssuntos h1 {
@@ -182,13 +191,16 @@ main > section {
 }
 
 #principaisAssuntos .assuntos {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: stretch;
+  grid-gap: 40px;
+  padding: 0px 30px;
 }
 
 #principaisAssuntos .assuntosItem {
   position: relative;
+  margin-bottom: 25px;
 }
 
 #principaisAssuntos .assuntosItem div {
@@ -209,6 +221,7 @@ main > section {
   z-index: -1;
 }
 
+
 #sobreOMemo {
   display: flex;
   justify-content: center;
@@ -216,17 +229,30 @@ main > section {
 }
 
 #sobreOMemo > div {
-  width: 40%;
+  width: 45%;
   color: #fff;
 }
 
 #sobreOMemo h1 {
   margin-bottom: 20px;
+  font-size: 2em;
+  color: #00ff88;
 }
 
-#depoimentos {
-  border: 2px solid yellow;
-  text-align: center;
+#depoimentos{
+  padding: 40px;
+}
+#depoimentos .titulos{
+  color: #00ff88;
+  display: flex;
+  justify-content: center;
+}
+
+#depoimentos h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin-bottom: 20px;
   color: #fff;
 }
 
@@ -315,6 +341,98 @@ main > section {
   background-color: transparent;  
 }
 
+footer{
+  background-color: #2B2637;
+  color: #fff;
+}
+#footer{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Responsividades Tablet */
+
+@media (max-width: 900px) {
+
+  /* Index */
+  header nav{
+    display: none;
+  }
+
+  #inicio{
+    margin-bottom: 30px;
+  }
+  #inicio > div {
+    width: 80%;
+  }
+  #inicio button{
+    margin: 0 auto;
+  }
+
+  #sobreOMemo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  #sobreOMemo > div {
+    width: 80%;
+  }
+
+  #principaisAssuntos h1{
+    text-align: center;
+  }
+  #principaisAssuntos .assuntos {
+    grid-template-columns: repeat(2, 1fr);
+}
+  
+
+
+
+  .login img {
+    display: none;
+  }
+}
+
+/* Responsividades Celular */
+
+@media (max-width: 700px){
+
+  /* Index */
+  header nav{
+    display: none;
+  }
+
+  #inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  #inicio > div {
+    width: 90%;
+  }
+  #inicio button{
+    margin: 0 auto;
+  }
+
+  #sobreOMemo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #sobreOMemo > div {
+    width: 80%;
+  }
+  #sobreOMemo h1{
+    text-align: center;
+  }
+
+  #principaisAssuntos .assuntos {
+    grid-template-columns: repeat(1, 1fr);
+}
+
 /* Login Page */
 .login {
   display: flex;
@@ -378,11 +496,7 @@ main > section {
   margin-bottom: 10px;
 }
 
-@media (max-width: 800px) {
-  .login img {
-    display: none;
-  }
-}
+
 
 /* Page Cadastro */
 .formCadastro {

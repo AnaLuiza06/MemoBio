@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>MemoBio/Login</title>
 		<link rel="stylesheet" type="text/css" href="./style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +17,7 @@
 		<div class="login">
 			<img src="../imgs/Astronaut suit-amico.svg">
 
-			<form>
+			<form method="post" action="validalogin.php">
 				<h1>Login</h1>
 
 				<label>E-mail</label>
@@ -31,7 +32,7 @@
 				</div>
 
 				<div>
-					<button><a href="pageAluno.html">Entrar</a></button>
+					<button type="submit"><a href="#">Entrar</a></button>
 				</div>
 			</form>
 		</div>

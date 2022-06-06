@@ -1,9 +1,11 @@
 
 .conteudoPergunta{
-	padding: 30px;	
+	padding: 20px;
+	width: 100%;
+	height: 100%;
 }
 .containerPergunta{
-    width: 60vw;
+    width: 800px;
     border: #00ff88 2px solid;
     border-radius: 15px;
     padding: 20px 30px;
@@ -28,7 +30,7 @@
     margin-top: 10px;
 }
 .imgPergunta img{
-    width: 50%;
+    width: 60%;
 }
 .alternativasPergunta{
 	margin-top: 15px;
@@ -68,13 +70,77 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 60vw;
+	width: 820px;
     border: #00ff88 2px solid;
     border-radius: 15px;
     padding: 20px 30px;
     margin: 10px auto;
 }
-.containerLista div{
+.containerLista .assuntText{
 	display: flex;
 	gap: 20px;
+}
+.containerLista .btnlg{
+	display: flex;
+	gap: 20px;
+}
+.containerLista .btnsm{
+	display: none;
+}
+
+
+/* Responsividades Tablet */
+
+@media (max-width: 900px) {
+	.containerPergunta{
+		padding: 20px;
+		width: 520px;
+	}
+
+	.headerListaPerguntas{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 10px;
+	}
+	.containerLista{
+		width: 550px;
+	}
+	.containerLista .assuntText{
+		flex-direction: column;
+	}
+
+
+}
+
+/* Responsividades Celular */
+
+@media (max-width: 660px){
+	.containerPergunta{
+		width: 360px;	
+	}
+	.containerLista{
+		width: 380px;
+	}
+	.headerListaPerguntas{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.headerListaPerguntas div{
+		margin-top: 20px;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	.containerLista .btnsm{
+		display: flex;
+		gap: 10px;
+		
+	}
+	.containerLista .btnlg{
+		display: none;
+	}
+	.containerLista{
+	    padding: 10px 15px;
+	    margin: 10px auto;
+	}
 }

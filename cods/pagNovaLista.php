@@ -104,9 +104,10 @@
                                 <input type="text" name="nome">
                             </div>
                             <div>
-                                <label class="expo">Texto expositivo</label><textarea class="msg" cols="35" rows="8"></textarea>
+                                <label class="expo">Texto expositivo</label><textarea class="msg" cols="35" rows="8" name="txtExpo"></textarea>
                                
                             </div>
+                    
                             <div class="botaobla">
                                 <button class="btnicone">Adicionar icone</button>
                                 <button class="btnadicionar">Adicionar</button>

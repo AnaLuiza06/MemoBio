@@ -1,8 +1,19 @@
 <?php
-	$servidor = 'localhost';
-	$usuario = 'root';
-	$senha = '';
-	$banco = 'bd_memo_bio';
+	$servidor = 'sql113.epizy.com';
+	$usuario = 'epiz_31689067';
+	$senha = 'kpchNgzsXHF95s';
+	$dbnome = 'epiz_31689067_memobio';
+	$ambiente = "local";
 
-	$cn = new PDO('mysql:host='.$servidor.';dbname='.$banco, $usuario, $senha);
+	if (!strcmp($ambiente, "local")) {
+		$servidor = 'localhost';
+		$usuario = 'root';
+		$senha = '';
+		$dbnome = 'memobio';
+	}
+
+	$conn = mysqli_connect($servidor, $usuario, $senha, $dbnome);
+	if(!$conn){
+		die("Conexão falida:".mysqli_connect_error());
+	}
 ?>

@@ -2,29 +2,29 @@
 
 	include ('conexao.php');
 
-	$validaEmail = $_POST['Email'];
-	$validaSenha = $_POST['Senha'];
+	$validaEmail = $_POST['email'];
+	$validaSenha = $_POST['senha'];
 
 	session_start();
-	
-	$consulta = $cn->query("select * from tb_cadastroUsuario where Email = '$validaEmail' and Senha = '$validaSenha'");
+	$consulta = mysqli_query($conn, "select * from tb_usuario where email = '$validaEmail' and senha = '$validaSenha'");
+	$exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
 
-	if($consulta->rowCount() == 1){
-		$exibeusuario = $consulta->fetch(PDO::FETCH_ASSOC);
+	if(count($exibe) >= 1){
 
-		if ($exibeusuario['ADM'] == 0) {
-			$_SESSION['ID'] = $exibeusuario['idtb_cadastroUsuario'];
-			$_SESSION['status'] = 0;
+		$consulta = mysqli_query($conn, "select status from tb_usuario where email = '$validaEmail'");
+    	$statusUser = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
+    	$status = $statusUser[0]["status"];
+
+		if ($status == 0) {
+			echo "<script>alert('Email e/ou senha validos!')</script>";
 			header('location:pageAluno.php');
 		}
 		else{
-			$_SESSION['ID'] = $exibealuno['idtb_cadastroUsuario'];
-			$_SESSION['status'] = 1;
 			header('location:pagADM.php');
 		}
 	}
 	else{
 	}
-		echo "<script>alert('Email e/ou senha invalidos!');window.location='pagLogin.php'</script>";
+		echo "<script>alert('Email e/ou senha invalidos!')</script>";
 
 ?>

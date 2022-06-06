@@ -14,6 +14,7 @@
 	padding: 20px;
 	transition: all .3s ease;
 	overflow: auto;
+	color: #fff;
 
 }
 .usuario{
@@ -101,13 +102,13 @@
 	z-index: -1;
 }
 
-.pageUser .iconResposive svg {
+.menuUsuario .iconResposive svg {
 	color: #fff;
 	display: none;
 }
 
 @media (max-width: 900px){
-	.pageUser .iconResposive svg{
+	.menuUsuario .iconResposive svg{
 		display: block;
 	}
 	.iconResposive {
