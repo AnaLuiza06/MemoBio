@@ -16,12 +16,14 @@
 	if (count($exibe) >= 1) {
 		//echo "usuário já cadastrado";
 		echo "<script>alert('Usuário já existente.')</script>";
+        header("Location: ./pagCadastro.php");
 	} else{
 		//echo "Usuário NÃO cadastrado";
 
 		$incluir = $conn->query("insert into tb_usuario(nome, email, senha, status)
 			values('$Nome', '$Email', '$Senha', 0)");
 		echo "<script>alert('Usuário cadastrado!!.')</script>";
+        header("Location: ./pageAluno.php");
 	}
 
 ?>

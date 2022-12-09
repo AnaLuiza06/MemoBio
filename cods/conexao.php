@@ -1,11 +1,11 @@
 <?php
+
 	$servidor = 'sql113.epizy.com';
 	$usuario = 'epiz_31689067';
 	$senha = 'kpchNgzsXHF95s';
 	$dbnome = 'epiz_31689067_memobio';
-	$ambiente = "local";
 
-	if (!strcmp($ambiente, "local")) {
+	if($_SERVER['SERVER_NAME'] == 'localhost'){
 		$servidor = 'localhost';
 		$usuario = 'root';
 		$senha = '';
@@ -16,4 +16,3 @@
 	if(!$conn){
 		die("Conexão falida:".mysqli_connect_error());
 	}
-?>

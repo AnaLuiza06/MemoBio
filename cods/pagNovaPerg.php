@@ -30,7 +30,7 @@
                                 	<?php
 							            include ('conexao.php');
 
-							            $result = mysqli_query($conn, 'select * from tb_assuntosMain');
+							            $result = mysqli_query($conn, 'select * from tb_assuntos');
 							            $consulta = mysqli_fetch_all($result, MYSQLI_ASSOC);
 							            //$consulta = $conn->query();
 							          ?>
@@ -71,6 +71,10 @@
                                 <input type="text" name="alt3" placeholder="C">
                                 <input type="text" name="alt4" placeholder="D">
                                 <input type="text" name="alt5" placeholder="E">
+                            </div>
+                            <div>
+                                <label>Alternativa Certa</label>
+                                <input type="text" name="altCerta">
                             </div>
                             <div class="botaobla">
                                 <button class="btnadicionar" type="submit">Enviar</button>

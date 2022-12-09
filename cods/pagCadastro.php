@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="cadastrocss.css" media="screen"/>
         <script src="https://kit.fontawesome.com/ec4f0fa510.js" crossorigin="anonymous"></script>
-        <title>Login</title>
+        <title>MemoBio</title>
     </head>
     <body>
         <div class="container">

@@ -1,6 +1,4 @@
-html{
-	
-}
+
 /*form*/
 .conteudobla{
 	width: 100%;
@@ -117,6 +115,10 @@ html{
 	justify-items: stretch;
 	grid-gap: 20px;
 	padding: 30px 20px;
+}
+.bloquinhos a{
+    color: #fff;
+	text-decoration: none;
 }
 .bloquinhos .bloquinhosMateria{
     position: relative;
