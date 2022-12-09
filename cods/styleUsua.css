@@ -55,18 +55,40 @@
 	gap: 5px;
 	padding: 0 10px;
 }
-.menu ul li:hover {
-	background-color: #00ff88;
-	border-radius: 5px;
-	transition: all 0.3s;
-}
 .menu ul li a{
 	color: #fff;
 	font-size: 16px;
 	text-decoration: none;
 	transition: all 0.3s;
-	border-radius: 10px;
 	padding: 5px;
+}
+.menu ul li a:hover{
+	color: #00ff88;
+	font-size: 18px;
+	transition: all 0.3s;
+}
+.menu #materiais{
+	display: none;
+    transition: all .4s ease;
+}
+.menu #materiais.active{
+	display: block;
+    transition: all .4s ease;
+}
+.menu #materiais.acitve ul li {
+   margin-left: 20px; 
+}
+.menu #materiais.active ul li a{
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	transition: all 0.3s;
+	margin-left: 10px;
+}
+.menu #materiais.active li a:hover{
+	color: #00ff88;
+	transition: all 0.3s;
+
 }
 .conteudo{
 	width: 80%;
